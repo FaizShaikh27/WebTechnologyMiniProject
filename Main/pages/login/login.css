@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::selection {
+    color: var(--color-1);
+    background-color: var(--color-2);
+  }
+
+:root {
+  --color-1: #2e4a70;
+  --color-2: #253d55;
+  --color-3: #2e4a70;
+  --trans-bg: rgba(255, 249, 184, 0.86);
+  --container-back: #fdd577;
+  --stroke-color: #253d55;
+  --yellow-bg: #FFBB5C;
+  --white: #ffffff;
+}
+.stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--stroke-color);
+}
+
+::placeholder{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--container-back);
+}
+
+/* NAV CUSTOMISATION */
+
+.nav {
+  background-color: var(--trans-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 10vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-radius: 10px;
+}
+/* LOGO AND TITLE  */
+.branding {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 50px;
+}
+.branding h1 {
+  color: var(--color-3);
+}
+
+
+
+
+/* LOGO */
+.girl {
+  margin-right: 10px;
+  height: 5vh;
+  width: auto;
+  border-radius: 50%;
+}
+/* LINKS */
+.links {
+  width: 40%;
+}
+.links ul {
+  /* width: 50%; */
+  display: flex;
+  justify-content: space-around;
+}
+.links ul li {
+  position: relative;
+  list-style-type: none;
+}
+.links ul li a {
+  color: var(--color-3);
+  transition: all ease 0.3s;
+  text-decoration: none;
+}
+.links ul li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--color-3);
+  width: 0%;
+  transition: all ease 0.5s;
+}
+.links ul li:hover::after {
+  width: 100%;
+  background-color: #000000;
+}
+.links ul li:hover a {
+  color: #000000;
+}
+
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  padding-left: 0;
+  left: 0;
+  display: none;
+  background-color: var(--trans-bg);
+}
+
+ul li ul li{
+  padding-left: 5px;
+}
+
+
+ul li:hover > ul,
+    ul li ul:hover {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+      min-width: 250px;
+      text-align: left;
+      padding-top: 20px;
+      box-shadow: 0px 3px 5px -1px #ccc;
+      
+    }
+
+    ul li ul li {
+      clear: both;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 20px;
+      border-style: none;
+    }
+
+    ul li ul li a:hover {
+      padding-left: 5px;
+      transition: all 0.3s ease;
+    }
+
+
+/* CONTAINER CUSTOMIZATION */
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 400px;
+  width: 400px;
+  background-color: var(--white); 
+  border-radius: 10px;
+  color: var(--stroke-color);
+  margin-top: 100px;
+  padding: 20px;
+}
+
+/* USER ICON CUSTOMIZATION */
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--container-back);
+  margin-top: -50px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  color: black;
+  font-size: 30px;
+}
+
+/* FORM CUSTOMIZATION */
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+/* INPUT FIELD CUSTOMIZATION */
+.email input,
+.pass input {
+  color: rgb(0, 0, 0);
+  background-color: var(--yellow-bg); 
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin: 10px;
+  outline: none;
+  transition: all ease 0.5s;
+  font-family: 'Poppins', sans-serif;
+  width: 80%;
+}
+
+
+.email i, 
+.pass i{
+  color: var(--yellow-bg);
+}
+.email input:hover,
+.pass input:hover {
+  border: 2px solid  var(--yellow-bg); 
+  background-color: transparent;
+  color:  var(--yellow-bg); 
+}
+
+/* BUTTON CUSTOMIZATION */
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  border: 2px solid transparent;
+  background-color:  var(--yellow-bg); 
+  transition: all ease 0.5s;
+}
+
+button a {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 2px solid  var(--yellow-bg); 
+}
+
+button:hover a {
+  color:  var(--yellow-bg);
+}
+
+/* SIGNUP LINK CUSTOMIZATION */
+.signup-link {
+  margin-top: 20px;
+}
+
+.signup-link a {
+  color: #5e8cba;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

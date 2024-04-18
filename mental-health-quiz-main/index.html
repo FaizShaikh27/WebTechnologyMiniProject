@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mindful Conversations</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .button-74 {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 20px;
+}
+
+.button-74 a{
+  text-decoration: none;
+  color: black;
+}
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Mental Health Chatbot</h1>
+    <p class="header-description">"Supportive and Confidential Mental Health Guidance"</p>
+    <p class="header-instructions">Please answer the following questions with "Yes" or "No".</p>
+    <button class="button-74" role="button"><a href="./../MainLog/index.html">Get Back</a></button>
+
+  </header>
+
+
+  <div class="chatbot-container">
+    <div class="chat-log" id="chatLog"></div>
+    <div class="input-container">
+      <input type="text" id="userInput" placeholder="Type your answer...">
+      <button id="sendButton">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
